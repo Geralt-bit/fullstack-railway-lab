@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./style.css";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_URL = "https://fullstack-railway-lab-production-77c5.up.railway.app";
 
 function App() {
   const [tasks, setTasks] = useState([]);
