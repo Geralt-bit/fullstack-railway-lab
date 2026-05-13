@@ -5,14 +5,10 @@ export default defineConfig({
   plugins: [react()],
   preview: {
     host: "0.0.0.0",
-    allowedHosts: [
-      "harmonious-comfort-production-9f01.up.railway.app"
-    ]
+    allowedHosts: true
   },
   server: {
     host: "0.0.0.0",
-    allowedHosts: [
-      "harmonious-comfort-production-9f01.up.railway.app"
-    ]
+    allowedHosts: true
   }
 });
