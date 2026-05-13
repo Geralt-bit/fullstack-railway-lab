@@ -6,13 +6,13 @@ export default defineConfig({
   preview: {
     host: "0.0.0.0",
     allowedHosts: [
-      "harmonious-comfort-production-ac14.up.railway.app"
+      "harmonious-comfort-production-9f01.up.railway.app"
     ]
   },
   server: {
     host: "0.0.0.0",
     allowedHosts: [
-      "harmonious-comfort-production-ac14.up.railway.app"
+      "harmonious-comfort-production-9f01.up.railway.app"
     ]
   }
 });
