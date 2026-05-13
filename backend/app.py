@@ -44,12 +44,13 @@ def get_data():
 
 @app.route("/api/data", methods=["POST"])
 def add_data():
-    init_db()
     data = request.get_json(silent=True) or {}
     title = (data.get("title") or "").strip()
+
     if not title:
         return jsonify({"error": "title is required"}), 400
 
+    init_db()
     conn = get_db_connection()
     cur = conn.cursor()
     cur.execute("INSERT INTO tasks (title) VALUES (%s) RETURNING id, title, created_at", (title,))
@@ -58,6 +59,7 @@ def add_data():
     cur.close()
     conn.close()
     return jsonify(row), 201
+
 
 @app.route("/api/data/<int:item_id>", methods=["DELETE"])
 def delete_data(item_id):
